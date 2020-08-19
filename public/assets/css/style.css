@@ -20,7 +20,7 @@ body {
 }
 
 .text-logo {
-  width: 250px;
+  width: 300px;
   padding: 10px;
 }
 
@@ -33,7 +33,12 @@ body {
 }
 
 .navbar {
+  height: 10%;
   color: var(--QTteal);
+}
+
+nav.nav-extended {
+  height: 112px;
 }
 
 .logo {
