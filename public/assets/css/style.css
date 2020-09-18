@@ -1,8 +1,7 @@
-/* #CDBA54
-#1C5B43 */
 :root {
   --QTgold: #CDBA54;
   --QTteal: #1C5B43;
+  --QTbeige: #a58c72;
 }
 
 html, body {
@@ -11,8 +10,15 @@ html, body {
 }
 
 body {
-  /* background-image: url(../images/milkywayfillerQT.jpg); */
-  background-color: var(--QTgold);
+  /* background-color: var(--QTgold); */
+  background-color: rgb(156, 156, 156);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .teal-text {
@@ -21,20 +27,15 @@ body {
 
 .text-logo {
   width: 300px;
-  padding: 10px;
+  padding: 0 20px 0 20px;
 }
 
-.sun {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 10px;
+.row {
+  margin-bottom: 0 !important;
 }
 
 .navbar {
   height: 10%;
-  color: var(--QTteal);
 }
 
 nav.nav-extended {
@@ -42,12 +43,84 @@ nav.nav-extended {
 }
 
 .logo {
-  color: var(--QTgold);
-  color: var(--QTteal);
+  padding: 0 !important;
 }
 
-.sun-image {
-  height: 35%;
-  width: 35%;
+.logo-image {
+  height: 100%;
+  width: 100%;
   text-align: center;
+}
+
+.secondary-logo-image {
+  height: 100%;
+  width: 100%;
+  padding: 0 0 0 0;
+}
+
+.logo-container {
+  padding: 30px 0 30px 0;
+}
+
+.outer-logo {
+  margin-bottom: 10%;
+}
+
+.secondary-logo {
+  transition: transform 1s;
+}
+
+.palmtree-image {
+  animation: floating 4.5s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+.maple-image {
+  animation: floating 4s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+.bonsai-image {
+  animation: floating 3.5s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+.bamboo-image {
+  animation: floating 6s linear infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes floating { 
+  0% { transform: translate(0,  0px); } 
+  50%  { transform: translate(0, 15px); } 
+  100%   { transform: translate(0, -0px); }     
+} 
+
+.logo-image:hover {
+  position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: fadein 2s;
+  animation: fadein 2s;
+}
+/* @keyframes fadein {
+  from { opacity: 0;
+        background-image: url("../images/transparent-shine-copy-3.png");
+        background-position: center;
+        background-size: 100%; }
+  to   { opacity: 1;
+        background-image: url("../images/transparent-shine-copy-3.png");
+        background-position: center;
+        background-size: 100%; }
+} */
+
+.secondary-logo:hover {
+  transform: translate(0, -10%);
+}
+
+.primary-logo {
+  transition: transform 1s, background-image 1s;
+}
+
+.primary-logo:hover {
+  background-image: url("../images/transparent-shine-copy-3.png");
+  background-position: center;
+  background-size: 100%;
+  background: rgba(156, 156, 156, 1);
+  transform: translate(0, -2%);
 }
